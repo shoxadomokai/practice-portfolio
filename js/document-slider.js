@@ -5,7 +5,7 @@ showSections(sectionIndex);
 
 function plusSections(n) {
   showSections(sectionIndex += n);
-   $("#intro .grid-container").addClass("animated slideInDown fast");    
+   $("#intro .grid-container").addClass("animated slideInDown slow");    
 }
 
 function currentSection(n) {
