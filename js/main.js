@@ -35,7 +35,9 @@ function showDivs(n) {
   var currentSlide = x[slideIndex-1];
     
   if (n > x.length) {
-      slideIndex = 1
+      slideIndex = 1;
+      $('.slide-item .animated').removeClass('fadeInUp');
+      $('.slide-item').addClass('animated slideInRight');
   }
     
   if (n < 1) {
@@ -77,3 +79,41 @@ $('.dash-area').hover(function(){
 function(){
   $("dash").css("animation-play-state", "running")
 });
+
+var sliderIndex = 1;
+showSliders(sliderIndex);
+
+function plusSliders(n) {
+  showSliders(sliderIndex += n);  
+}
+
+function currentSlider(n) {
+  showSliders(sliderIndex = n);
+}
+
+function showSliders(n) {
+    
+  var i;
+  var z = $(".slider");
+  var dots = $(".list");
+    
+  if (n > z.length) {
+      sliderIndex = 1;
+  }
+    
+  if (n < 1) {
+      sliderIndex = z.length
+  }
+    
+  for (i = 0; i < z.length; i++) { 
+    $(z[i]).hide();
+  }
+    
+  for (i = 0; i < dots.length; i++) {
+    $(dots[i]).removeClass('active-section');
+  }
+    
+  $(z[sliderIndex-1]).show();
+    
+  $(dots[sliderIndex-1]).addClass('active-section');
+}
