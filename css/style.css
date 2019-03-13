@@ -120,6 +120,7 @@ a:hover img {
     transition: 0.5s color ease;
     padding-left: 10px;
     border-left: solid 2px transparent;
+    margin-left: 90px;
 }
 
 .nav-wrapper li:hover, .nav-wrapper li:focus {
@@ -133,6 +134,10 @@ a:hover img {
 .nav-wrapper ul > .active-section {
     border-left: solid 2px darkred;
     color: black;
+}
+
+.nav-wrapper ul > .active-section:hover {
+    color: darkred;
 }
 
 .slider {
@@ -486,7 +491,7 @@ a:hover img {
     width: 70%;
 }
 
-.aboutustext p {
+.aboutustext p, .contactustext p {
     justify-content: center;
     text-align: center;
     font-size: 20px;
@@ -519,4 +524,56 @@ a:hover img {
     color: white;
     transition: 1s all ease;
     cursor: pointer;
+}
+
+.about:hover:after {
+    content: "ABOUT";
+    padding-left: 20px;
+    color: darkred;
+}
+
+.about:after {
+    content: "ABOUT";
+    padding-left: 20px;
+    color: transparent;
+    transition: 0.5s color ease;
+}
+
+.features:hover:after {
+    content: "FEATURES";
+    padding-left: 20px;
+    color: darkred;
+}
+
+.features:after {
+    content: "FEATURES";
+    padding-left: 20px;
+    color: transparent;
+    transition: 0.5s color ease;
+}
+
+.clients:hover:after {
+    content: "CLIENTS";
+    padding-left: 20px;
+    color: darkred;
+}
+
+.clients:after {
+    content: "CLIENTS";
+    padding-left: 20px;
+    color: transparent;
+    transition: 0.5s color ease;
+}
+
+.contactus:hover:after {
+    content: "CONTACT";
+    padding-left: 20px;
+    color: darkred;
+}
+
+.contactus:after {
+    content: "CONTACT";
+    padding-left: 20px;
+    color: transparent;
+    transition: 0.5s color ease;
 }
