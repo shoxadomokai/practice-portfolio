@@ -32,6 +32,14 @@ a:hover img {
     letter-spacing: 5px;
 }
 
+.tagline-2 {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.tagline-2
+
 .text-area p , .aboutustext p {
     line-height: 1.5rem        
 }
