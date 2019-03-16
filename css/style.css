@@ -3,8 +3,14 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: Taken;
+    src: url("../fonts/Taken.otf");
+    
+}
+
 body {
-    font-family: gotham;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
     overflow: hidden;
     background-color: #131017;
 }
@@ -38,10 +44,8 @@ a:hover img {
     letter-spacing: 5px;
 }
 
-.tagline-2
-
-.text-area p , .aboutustext p {
-    line-height: 1.5rem        
+.text-area p {
+    line-height: 1.5em       
 }
 
 @keyframes rotating {
@@ -476,7 +480,7 @@ a:hover img {
 .huge-image-caption {
     font-weight: 300;
     font-size: 50px;
-    font-family: 'Taken by Vultures Demo'
+    font-family: Taken;
 }
 
 .st0 {
@@ -584,4 +588,85 @@ a:hover img {
     padding-left: 20px;
     color: transparent;
     transition: 0.5s color ease;
+}
+
+.content-container {
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+
+.content-container .content {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.box {
+    height: 200px;
+}
+
+.box h2 {
+    font-size: 100px;
+    font-weight: 800;
+    color: rgb(0, 0, 0, 0.2);
+/*    text-align: right;*/
+    transform: translateY(60px);
+    transition: 0.5s ease;
+}
+
+.box h4 {
+    font-size: 20px;
+    transition: 0.5s ease;
+/*    margin-bottom: 15px;*/
+    transform: translateY(-20px);
+}
+
+.content {
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.content:hover {
+    background-color: black;
+}
+
+.content:hover .box h2 , .content:focus .box h2 {
+    transform: translateY(-10px);
+    color: rgb(255, 255, 255, 0.5);
+
+}
+
+.content .box p {
+    margin-bottom: 0px;
+    transition: 0.5s ease;
+}            
+
+.content:hover .box p {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.content:hover .box h4 {
+    color: white;
+}
+
+.content:hover .box a {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.box a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;;
+    color: white;
+    transition: 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.box a:hover {
+    color: black;
+    background-color: white;
 }
